@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    height: 55vh;
+    overflow: auto; 
+    margin: 5vh;
+    background-color: rgb(115, 115, 115);;
+}
+.container-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: min-content;
+    align-items: center;  
+    padding: 1%;
+    border-radius: 10px;  
+    background-color:  black;    
+    color: white;
+    margin-top: 3vh;
+}
+.container-content--button {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-left: auto;
+}
+.title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+
+.stars {
+    font-size: large;
+    color: red;
+}
+
+.movies-button--delete {
+    padding: 0.5%;     
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-left: 5%;    
+}
+.movies-button--delete:hover {
+    background-color: red;
+}

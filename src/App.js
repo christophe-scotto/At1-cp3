@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Header from './Components/Header/Header';
+import Container from './Components/Container/Container';
+import AddMovie from './Actions/AddMovie/AddMovie';
+
 import './App.css';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        {!showModal && 
+          <>
+            <Container />
+            <button
+              className="app-button--addMovie"
+              onClick={() => setShowModal(true)}
+            >
+              Add Movie
+            </button>
+          </>
+        }
+        {showModal && (
+          <AddMovie onClose={handleCloseModal} />
+        )}
+      
+      </div>
+    </>
   );
 }
 

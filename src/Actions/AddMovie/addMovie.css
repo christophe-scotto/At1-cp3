@@ -1,0 +1,24 @@
+.addMovie-form {
+    display:flex ;
+    flex-direction: column;
+    margin-top: 2vh;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+    background-color: rgb(115, 115, 115);
+}
+.addMovie-form--input {
+    margin: 2vh;
+}
+.addMovie-form--rating {
+    margin: 2vh;
+}
+.addMovie-form--Button {
+    margin: 2vh;
+    margin-left: 3vw;
+   
+}
+.addMovie-form--Button--cancel {
+    margin-left: 0vw;
+}
